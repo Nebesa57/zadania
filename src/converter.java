@@ -12,9 +12,8 @@ public class converter {
         System.out.println("1: Перевод из 10 системы счисления в 16 сч ");
         System.out.println("2: Перевод из 10 системы счисления в 2 сч ");
         System.out.println("3: Перевод из 2 системы счисления в 10 сч ");
-
-        System.out.print("Введите номер действия: ");
-        int b = scanner.nextInt();
+            System.out.print("Введите номер действия: ");
+            int b = scanner.nextInt();
             if (b < 1 || b > 3) {
                 System.out.println("Неправильный выбор");
                 return;
