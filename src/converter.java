@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -43,15 +44,26 @@ public class converter {
                 try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
                     String h = reader.readLine();
                     int n = 0;
+                    int schet = h.length();
+                    int number = Integer.parseInt (h);
+                    while (schet!=0){
+                        if(number%10!=1 && number%10!=0){
+                            System.out.println("Ввели неправильноe число");
+                            System.exit (1);
+                        }
+                        schet = schet - 1;
+                        number= number / 10;
+
+                    }
                     for (int i = h.length() - 1, j = 1; i >= 0; i--, j *= 2) {
                         n += (h.charAt(i) - '0') * j;
-
-                        int con = Integer.parseInt(h, 2);
                     }
+                    int con = Integer.parseInt(h, 2);
                     System.out.println("Ваше число придставлено в 10 сч: " + n);
                     break;
                 }
         }
     }
 }
+
 
