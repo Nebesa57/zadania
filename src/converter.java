@@ -37,6 +37,7 @@ public class converter {
                 for(int i = h.length()-1,j=1;i>=0;i--,j*=2){
                     n += (h.charAt(i) - '0') * j;
                 }
+                int con = Integer.parseInt(h,2);
                 System.out.println("Ваше число придставлено в 10 сч: " + n );
                 break;
         }
