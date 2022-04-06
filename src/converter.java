@@ -12,14 +12,19 @@ public class converter {
         System.out.println("1: Перевод из 10 системы счисления в 16 сч ");
         System.out.println("2: Перевод из 10 системы счисления в 2 сч ");
         System.out.println("3: Перевод из 2 системы счисления в 10 сч ");
-            System.out.print("Введите номер действия: ");
-            int b = scanner.nextInt();
-            if (b < 1 || b > 3) {
-                System.out.println("Неправильный выбор");
-                return;
-            }
+        int b =0;
+       while(!vibor) {
+           System.out.print("Введите номер действия: ");
+            b = scanner.nextInt();
 
+           if (b > 0 && b < 4) {
+               vibor = true;
+           }
+           else {
+               System.out.println("Неправильный выбор");
+           }
 
+       }
         switch (b) {
             case 1:
                 System.out.print("Введите число которое хотите перевести из 10 сч в 16сч ");
